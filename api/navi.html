@@ -44,7 +44,8 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Plan</a></li>
                       <li><a class="dropdown-item" href="#">UXUI Design</a></li>
-                      <li><a class="dropdown-item" href="#">CI/BI</a></li>                     
+                      <li><a class="dropdown-item" href="#">CI/BI</a></li> 
+                      <li><a class="dropdown-item" href="#">bootstrap</a></li>                    
                     </ul>
                   </li>                  
                   <li class="nav-item  dropdown">
@@ -84,6 +85,7 @@
             </div>
           </nav>
     </header>
+    <section style="height: 300vh"></section>
 
 
     
@@ -94,6 +96,16 @@
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
     <!-- akax실행식넣기 -->
+    <script>
+      //section 태그에 bg-white라는 클래스 적용해
+      $("section").attr("class", "bg-white");
+      $("section").html($(".bg-dark").html());
+      
+      $(window).on('scroll', ()=>{
+        //스크롤 할 때마다 실행해
+        $("body").attr("data-position",$(window).scrollTop())
+      })
+    </script> 
 
 </body>
 </html>
